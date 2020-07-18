@@ -1,0 +1,264 @@
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Source Sans Pro", "Helvetica", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: 0.5ex;
+}
+
+small {
+  font-size: 75%;
+}
+
+big {
+  font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+Layout
+--------------------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.masthead {
+  padding: 1em 2em;
+  background-color: #0d1b2e;
+  color: white;
+  animation: appear 1s ease-in-out;
+}
+
+.masthead h1 {
+  text-align: center;
+}
+
+.intro {
+  padding: 2em 2em;
+  color: #ffffff;
+  background: #429890;
+  animation: appear 1s ease-in-out;
+}
+
+.intro p,
+.test-area {
+  margin: 0 auto;
+  max-width: 550px;
+}
+
+.test-area {
+  margin-bottom: 4em;
+  padding: 0 2em;
+}
+
+.test-wrapper {
+  border: 10px solid grey;
+  border-radius: 10px;
+}
+
+#origin-text {
+  margin: 1em 0;
+  padding: 1em 1em 0;
+  background-color: #ededed;
+  animation: leftIn 0.5s 1s ease-in-out backwards;
+}
+
+#origin-text p {
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+.test-wrapper {
+  display: flex;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.test-wrapper textarea {
+  flex: 1;
+}
+
+.meta {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.timer {
+  font-size: 2em;
+  font-family: "Orbitron", sans-serif;
+  opacity: 0.1;
+  margin-top: 10px;
+  transition: all 1s;
+  animation: leftIn 1s 1s ease-in backwards;
+}
+.timer:hover {
+  opacity: 1;
+}
+
+.highlight {
+  opacity: 1;
+}
+
+#reset {
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #e95d0f;
+  background: white;
+  border: 10px solid #e95d0f;
+  transition: 0.3s;
+  animation: rightIn 3s ease-in-out backwards, rotationY 1s 3s ease-in-out;
+}
+
+#reset:hover {
+  color: white;
+  cursor: pointer;
+  background-color: #e95d0f;
+}
+.results-wrap {
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.results {
+  text-align: center;
+  border: 5px solid green;
+  padding: 1em 1em;
+  transition: 0.5s ease-in-out;
+}
+.results-appear {
+  animation: rotation 2s ease-in-out 1;
+}
+
+.hidden {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+@keyframes rotation {
+  30% {
+    transform: rotateX(360deg);
+  }
+}
+@keyframes rotationY {
+  50% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes leftIn {
+  from {
+    opacity: 0;
+    margin-left: -4000px;
+  }
+}
+@keyframes rightIn {
+  from {
+    opacity: 0.3;
+    margin-right: -4000px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+    margin-top: -400px;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
